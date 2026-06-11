@@ -317,7 +317,7 @@ const sponsorOffers = [
   },
 ];
 
-function hasOverlap(a: number[], b: number[]) {
+function hasOverlap<T>(a: T[], b: T[]) {
   return a.some((value) => b.includes(value));
 }
 

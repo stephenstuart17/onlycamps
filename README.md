@@ -40,10 +40,19 @@ Open `http://localhost:3000/`.
 ```bash
 pnpm run lint
 pnpm run build
+pnpm run build:vercel
 ```
 
 GitHub Actions runs the same lint and build checks on pushes to `main` and on
 pull requests.
+
+## Deployment Notes
+
+- `pnpm run build` produces the Vinext/Cloudflare-compatible `dist/` output.
+- `pnpm run build:vercel` produces the Next.js `.next/` output expected by
+  Vercel.
+- `vercel.json` tells Vercel to use `pnpm run build:vercel`, avoiding a missing
+  `.next` output error.
 
 ## Useful Files
 

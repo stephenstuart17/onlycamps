@@ -32,3 +32,6 @@ jobs:
 
       - name: Build
         run: pnpm run build
+
+      - name: Build for Vercel
+        run: pnpm run build:vercel
